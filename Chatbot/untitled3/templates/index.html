@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+$(function() {
+      $('a#question').bind('click', function() {
+        $.getJSON('/get/', {
+          a: $('input[name="message"]').val(),
+        }, function(data) {
+          $("#result").text(data.result);
+        });
+        return false;
+      });
+    });
+  </script>
+
+
+<iframe src=""></iframe>
+<p>
+<h4>Usage example:</h4>
+<form class="bot" method="get" role="form" action="/get/">
+<input id='message' type="text" name="message">
+<input type="submit" value="Submit">
+<p><a href="javascript:void();" id="question">Send question</a>
+</form>
+
+
+<p>
+<h4>Contributing:</h4>
+<ul>
+Project is hosted on <a href="https://github.com/chamkank/flask-chatterbot">GitHub</a>.
+</ul>
+</p>
+
+
+</body>
+</html>
