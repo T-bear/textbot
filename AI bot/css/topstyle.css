@@ -10,16 +10,15 @@ body {
 
 .header-image {
     display: block;
-    width: 100%;
+    width: 50%;
     height: auto;
     text-align: center;
-
 }
 
 video {
   float: right;
-
-
+  width: 50%;
+  height: auto;
 }
 
 .headline {
@@ -44,7 +43,6 @@ video {
 
 .featurette {
     overflow: hidden;
-
 }
 
 .featurette-image.pull-left {
