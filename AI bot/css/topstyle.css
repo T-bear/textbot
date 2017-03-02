@@ -21,7 +21,8 @@ body {
 
 video {
   float: right;
-  margin-right: 20px;
+
+
 }
 
 .headline {
@@ -60,7 +61,7 @@ video {
     font-size: 50px;
 }
 .robot {
-margin: 50px;
+    margin: 50px;
     width:103px;
     height:130px;
     background: img="robotimg" no-repeat;
