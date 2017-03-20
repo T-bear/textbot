@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Botish</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".bot").submit(function(e){
+        var message = $("#message").val()
+        $.get("http://127.0.0.1:5000/get/?message=" + message, function(data) {
+
+            document.getElementById('div1').append(data + " ");
+
+        });
+        e.preventDefault()
+    });
+});
+  </script>
+
+
+
+<p>
+    <h1>I´m a botish</h1>
+    <form class="bot" method="get" role="form" action="">
+    <input id='message' type="text" name="message">
+    <input type="submit">
+</form>
+
+<div id="div1"></div>
+
+</body>
+</html>

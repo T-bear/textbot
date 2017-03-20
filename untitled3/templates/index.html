@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+$(function() {
+$.get( "/get/", function( data ) {
+    console.log("dddd")
+  $( "body" )
+    .append( "Name: " + data.name ) // John
+    .append( "Time: " + data.time ); //  2pm
+}, "json" );
+    });
+  </script>
+
+
+<iframe src=""></iframe>
+<p>
+<h4>Usage example:</h4>
+<form class="bot" method="get" role="form" action="/get/">
+<input id='message' type="text" name="message">
+<input type="submit" value="Submit">
+<p><a href="javascript:void();" id="question">Send question</a>
+</form>
+
+
+<p>
+<h4>Contributing:</h4>
+<ul>
+Project is hosted on <a href="https://github.com/chamkank/flask-chatterbot">GitHub</a>.
+
+</ul>
+</p>
+
+
+</body>
+</html>
